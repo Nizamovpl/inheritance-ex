@@ -8,38 +8,38 @@ public class Employee extends Person {
 
     private String department;
 
-   
+    private double wage; 
 
     public final int HOURS = 40;
 
     public final double OVERTIME = 1.5;
 
-   
-
-     //default constructor
-
+    //constructor
      public Employee() {
-
+        
+        super();
+        payRate = 0;
+        hoursWorked = 0;
+        department = "";
 
      }
 
- 
+     public Employee(int payRate, int hoursWorked, String department) {
+        super();
+        this.payRate = payRate;
+        this.hoursWorked = hoursWorked;
+        this.department = department;
 
-     //add an alternate constructor with parameters
-
+     }
     
 
     
 
      public String toString() {
-        
-        return "hi"; 
+       //replace xxx with person name
+       //replace wage with wage wghen done
 
-         //should return a String like this:
-
-         //The wages for xxxx from the xxxx department are: $xxxxx.xx"
-
- 
+        return "The wages for" + "xxx" + department + "are : $ " + wage; 
 
      }
 
@@ -47,31 +47,24 @@ public class Employee extends Person {
 
      public void print() {
 
-       //Should print output like this (same line):
+        //insert Wage when done
 
-       //The employee xxxx from the xxxx department worked xx hours
 
-       //with a pay rate of $xxx.xx. The wages for this employee are $xxxxx.xx
+        System.out.println(" The employee xxxx from the" + department+" worked" +hoursWorked + " hours with a pay rate of"+ payRate + "The wages for this employee are $xxxxx.xx"); 
+
      }
 
- 
-
-    
 
      public double calculatePay() {
 
-        //Method to calculate and return the wages
-
-        //handle both regular and overtime pay
-
-        return 0.0; 
- 
+        if(hoursWorked > HOURS){
+            wage = hoursWorked * payRate * OVERTIME; 
+        }else{
+            wage = hoursWorked * payRate; 
+        }
+            return wage; 
 
      }
-
- 
-
- 
 
      public void setAll(String first, String last, double rate, double hours, String dep){
 
