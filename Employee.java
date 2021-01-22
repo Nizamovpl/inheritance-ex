@@ -31,9 +31,6 @@ public class Employee extends Person {
         this.department = department;
 
      }
-    
-
-    
 
      public String toString() {
        //replace xxx with person name
@@ -67,14 +64,14 @@ public class Employee extends Person {
      }
 
      public void setAll(String first, String last, double rate, double hours, String dep){
-
+        //Wait till person is done
 
      }
 
  
 
      public double getPayRate() {
-        return 0.0; 
+        return payRate; 
      }
 
  
@@ -82,7 +79,7 @@ public class Employee extends Person {
     
 
      public double getHoursWorked() {
-        return 0.0; 
+        return hoursWorked; 
 
      }
 
@@ -92,14 +89,13 @@ public class Employee extends Person {
 
      public String getDepartment() {
 
-        return "hi"; 
+        return department; 
 
      }
 
     
 
      public boolean equals(Object o) {
-
     
         return true; 
      }
